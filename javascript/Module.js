@@ -2,6 +2,23 @@
  * Module Pattern
 */
 
+var Counter = (function() {
+
+    var counter = 0;
+
+    return {
+        increment: function() {
+            return counter++;
+        },
+        reset: function() {
+            console.log( 'Counter value prior to reset: ' + counter );
+            counter = 0;
+            return counter;
+        }
+    };
+
+})();
+
 var Basket = (function() {
 
     var basket = [];
@@ -26,4 +43,4 @@ var Basket = (function() {
 
 })();
 
-export default Basket;
+export { Counter, Basket };
