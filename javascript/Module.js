@@ -44,3 +44,22 @@ var Basket = (function() {
 })();
 
 export { Counter, Basket };
+
+/*
+** Usage: **
+
+import { Basket } from './design-patterns/Module';
+
+Basket.addItem({
+    item: 'bread',
+    price: 1.2
+});
+Basket.addItem({
+    item: 'butter',
+    price: 3.5
+});
+Basket.getItemCount();      // Returns: 2
+Basket.getTotal();          // Returns: 4.7
+Basket.basket               // Returns: undefined ('basket' is private)
+
+*/

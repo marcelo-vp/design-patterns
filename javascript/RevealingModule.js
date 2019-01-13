@@ -1,3 +1,7 @@
+/**
+ * Revealing Module Pattern
+*/
+
 var Greetings = (function() {
 
     var privateVar = 'Some name',
@@ -47,3 +51,17 @@ var Counter = (function() {
 })()
 
 export { Greetings, Counter };
+
+/*
+** Usage: **
+
+import { Greetings } from './design-patterns/RevealingModule';
+
+Greetings.greeting          // Returns 'Hey there!'
+Greetings.setName('Joe');
+Greetings.getName();        // Returns 'The name is: Joe'
+Greetings.publicGetName();  // Throws a type error, because there is
+                            // no such function on the returning object
+Greetings.publicVar         // Returns undefined
+
+*/

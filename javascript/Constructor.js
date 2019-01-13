@@ -20,3 +20,14 @@ Car.prototype.showYear = function() {
 };
 
 export default Car;
+
+/*
+** Usage: **
+
+import Car from './design-patterns/Constructor';
+var Gol = new Car('gol', 2019, 6000);
+
+Gol.toString();     // Returns: 'gol has done 6000 kilometers'
+Gol.showYear();     // Returns: 'This car was built in 2019'
+
+*/
